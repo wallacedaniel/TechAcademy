@@ -1,0 +1,300 @@
+## Pyglatin Translator 
+
+pyg = 'ay'
+
+original = raw_input('Enter a word:')
+
+if len(original) > 0 and original.isalpha():
+    word = original.lower()
+    first = word[0]
+    new_word = word[1:len(original)] + first + pyg
+    print new_word
+else:
+    print 'empty'
+    
+
+	
+
+ ## Trip Planner    
+    
+def hotel_cost(nights):
+    return 140 * nights
+    
+def plane_ride_cost(city):
+    if city == "Charlotte":
+        return 183
+    elif city == "Tampa":
+        return 220
+    elif city == "Pittsburgh":
+        return 222
+    elif city == "Los Angeles":
+        return 475
+        
+def rental_car_cost(days):
+    cost = 40 * days
+    if days >= 7:
+        cost -= 50
+    elif days >= 3:
+        cost -= 20
+    return cost
+
+def trip_cost(city, days, spending_money):
+    return  rental_car_cost(days) + hotel_cost(days) + plane_ride_cost(city) + spending_money   
+    
+print trip_cost("Los Angeles", 5, 600)
+
+
+
+
+## Grade Calculator
+
+lloyd = {
+    "name": "Lloyd",
+    "homework": [90.0, 97.0, 75.0, 92.0],
+    "quizzes": [88.0, 40.0, 94.0],
+    "tests": [75.0, 90.0]
+}
+alice = {
+    "name": "Alice",
+    "homework": [100.0, 92.0, 98.0, 100.0],
+    "quizzes": [82.0, 83.0, 91.0],
+    "tests": [89.0, 97.0]
+}
+tyler = {
+    "name": "Tyler",
+    "homework": [0.0, 87.0, 75.0, 22.0],
+    "quizzes": [0.0, 75.0, 78.0],
+    "tests": [100.0, 100.0]
+}
+
+# calcualtes averages
+def average(numbers):
+    total = sum(numbers)
+    total = float(total)
+    result = total / len(numbers)
+    return result
+ 
+# calculates weighted averages  
+def get_average (student):
+    homework = average(student["homework"])
+    quizzes = average(student["quizzes"])
+    tests = average(student["tests"])
+    homework = homework * .1
+    quizzes = quizzes * .3
+    tests = tests * .6
+    weight = homework + quizzes + tests
+    return weight
+
+# calculates letter grade
+def get_letter_grade(score):
+    if score >= 90:
+        return "A"
+    elif score >= 80:
+        return "B"
+    elif score >= 70:
+        return "C"
+    elif score >= 60:
+        return "D"
+    else:
+        return "F"
+
+# prints letter grade
+print get_letter_grade(get_average(lloyd))
+print get_letter_grade(get_average(alice))
+print get_letter_grade(get_average(tyler))
+
+# calcualtes class averages
+def get_class_average(students):
+    results = []
+    for student in students:
+        results.append(get_average(student))
+    return average(results)
+    
+ 
+#prints class average grade and average letter grade 
+   
+students = [lloyd, alice, tyler]
+print get_class_average(students)
+print get_letter_grade(get_class_average(students))
+
+
+
+
+#Battleship
+
+from random import randint
+
+board = []
+
+for x in range(5):
+    board.append(["O"] * 5)
+
+def print_board(board):
+    for row in board:
+        print " ".join(row)
+
+print "Let's play Battleship!"
+print_board(board)
+
+def random_row(board):
+    return randint(0, len(board) - 1)
+
+def random_col(board):
+    return randint(0, len(board[0]) - 1)
+
+ship_row = random_row(board)
+ship_col = random_col(board)
+
+for turn in range(4):
+    guess_row = int(raw_input("Guess Row:"))
+    guess_col = int(raw_input("Guess Col:"))
+    
+    if guess_row == ship_row and guess_col == ship_col:
+        print "Congratulations! You sunk my battleship!"
+        break
+    else:
+        if (guess_row < 0 or guess_row > 4) or (guess_col < 0 or guess_col > 4):
+            print "Oops, that's not even in the ocean."
+        elif(board[guess_row][guess_col] == "X"):
+            print "You guessed that one already."
+        else:
+            print "You missed my battleship!"
+            board[guess_row][guess_col] = "X"
+        print "Turn", turn + 1
+        print_board(board)
+        
+        if turn == 3:
+            print "Game Over"
+        
+ ## is integer?
+def is_int(x):
+    if x % 1 == 0:
+        return True
+    else:
+        return False
+
+## is even?
+def is_even(x):
+    if x % 2 == 0:
+        return True
+    else:
+        return False
+       
+##Funtion to sum the digits inputed
+def digit_sum(n):
+    digits = []
+    dig_string = str(n)
+    
+    for dig in dig_string:
+        digit = int(dig)
+        digits.append(digit)
+    
+    number = 0
+    
+    for num in digits:
+        number = number + num
+    return number
+        
+print digit_sum()
+
+#take2
+def digit_sum(n):
+    
+    digits = []
+    dig_string = str(n)
+    
+    for dig in dig_string:
+        digits.append(int(dig))
+    
+    number = 0
+    
+    for num in digits:
+        number = number + num
+    return number
+        
+print digit_sum(555)
+
+#take3
+def digit_sum(n):
+    
+    digits = []
+    dig_string = str(n)
+    
+    for dig in dig_string:
+        digits.append(int(dig))
+    
+    return sum(digits)
+        
+print digit_sum(555)
+
+#stake4
+def digit_sum(n):
+    
+    d = []
+    s = str(n)
+    
+    for x in s:
+        d.append(int(x))
+    
+    return sum(d)
+        
+print digit_sum(555)
+
+#step4
+def digit_sum(n):
+
+    d = []
+
+    for x in str(n):
+        d.append(int(x))
+    return sum(d)
+print digit_sum(555)
+
+#function to factorize input…6 = 6 * 5 * 4 * 3 …
+def factorial(x):
+    
+    lst = [1]
+    
+    if x == 0 or 1:
+        lst[0] = 1
+        
+     while x > 1:
+        lst.append(x)
+        lst[0] = lst[0] * lst[-1]
+        x -= 1
+        
+    print lst[0]   
+    return lst[0]
+    
+    
+factorial(10)
+
+#other solutions
+
+def factorial(x):
+    if x == 0:
+      return 1
+    for i in range(1, x):
+        x *= i
+    return x
+
+def factorial(x):
+	total = 1
+	while x-1 > 0:
+		total = total*(x)
+		x -= 1
+		return total
+
+#function to asess primality
+
+def is_prime(x):
+    if x <= 1:
+        return False
+    elif x == 2:
+        return True
+    else:
+        for n in range(2, x-1):
+            if x % n == 0:
+                return False
+        return True
+

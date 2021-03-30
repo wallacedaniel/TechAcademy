@@ -1,0 +1,205 @@
+
+
+header .header-content .header-content-inner p{
+	color:#003248;
+}
+
+.header-content h2{
+	color: #003248;
+	margin-top:12px;
+}
+
+.bg-primary {
+    background-color: #03a9f4;
+}
+
+.btn-primary {
+    background-color: #03a9f4;
+}
+
+hr {
+    border-color: #03a9f4;
+}
+
+.navbar-fixed-top {
+    border-width: 0 0 2px;
+}
+
+.navbar-brand {
+	font-size:20px;
+} 
+
+.navbar-default .navbar-header .navbar-brand {
+    color: #003248;
+}
+
+.navbar-default .navbar-header .navbar-brand:focus, .navbar-default .navbar-header .navbar-brand:hover {
+    color: #03a9f4;
+}
+
+.navbar-default .nav>li>a, .navbar-default .nav>li>a:focus {
+		color:#003248;
+		font-size:14px;
+}
+
+.navbar-default .nav>li.active>a, .navbar-default .nav>li.active>a:focus {
+    color: #03a9f4;!important;
+}
+
+.navbar-default .nav>li.active>a, .navbar-default .nav>li.active>a:focus {
+    color: #03a9f4!important;
+}
+
+.navbar-default .nav>li>a:focus:hover, .navbar-default .nav>li>a:hover {
+    color: #03a9f4;
+}
+
+.navbar-default.affix .navbar-header .navbar-brand {
+    font-size: 16px;
+	color: #03a9f4;
+}
+
+.navbar-default.affix .navbar-header .navbar-brand:focus, .navbar-default.affix .navbar-header .navbar-brand:hover {
+    color: #03a9f4;
+}
+
+.navbar-default.affix .nav>li>a:focus:hover, .navbar-default.affix .nav>li>a:hover {
+    color: #03a9f4;
+}
+
+.recent-projects {
+	margin-bottom:40px;
+}
+
+.recent-projects .text-muted {
+    color: #003248;
+	font-size: 18px !important;
+}
+
+.portfolio-box .portfolio-box-caption {
+    background: rgba(3, 169, 244,.9);
+}
+
+.bg-dark {
+	background:#003248;
+}
+
+.call-to-action p {
+	margin-bottom:0;
+}
+
+.btn-primary.active, .btn-primary.focus, .btn-primary:active, .btn-primary:focus, .btn-primary:hover, .open>.dropdown-toggle.btn-primary {
+    background-color: #003248;
+}
+
+a {
+	color: #03a9f4;
+}
+
+a:focus, a:hover {
+    color:#003248;
+	text-decoration:none;
+}
+
+#contact {
+	padding:60px 0 60px;
+}
+
+#skills {
+	border-bottom: 20px solid #003248;
+}
+
+.bio-image{
+    border-radius: 100%;
+    width: 30%;
+    margin-bottom: 40px;
+}
+
+.social img {
+    width: 75px;
+    margin-right: 20px;
+}
+
+.social a {
+	display:inline-block;
+}
+
+.portfolio-images {
+	border-bottom: 60px solid #003248;
+}
+
+.recent-projects .text-muted {
+	margin-bottom:10px;
+}
+
+.recent-projects .service-box .project-date {
+	margin-bottom:10px;
+	font-size:15px;
+}
+
+.recent-projects .service-box p {
+	font-size:16px;
+	line-height:1.4;
+}
+
+
+@media (min-width: 768px){
+
+header .header-content .header-content-inner h1 {
+    font-size: 56px;
+}
+
+h2 {
+	font-size: 34px;
+}
+
+header .header-content .header-content-inner p {
+	font-size: 20px;
+}
+
+.bg-primary p {
+	font-size:20px;
+	line-height: 1.8;
+}
+
+.bg-dark p {
+	font-size:18px;
+	line-height: 1.8;
+}
+
+.navbar-default.affix .navbar-header .navbar-brand {
+    color: #03a9f4;
+}
+
+.navbar-default.affix .navbar-header .navbar-brand:focus, .navbar-default.affix .navbar-header .navbar-brand:hover {
+    color: #03a9f4;
+}
+
+.navbar-default.affix .nav>li>a:focus:hover, .navbar-default.affix .nav>li>a:hover {
+    color: #03a9f4;
+}
+
+a {
+    color: #03a9f4;
+}
+
+aside {
+    padding: 44px 0;
+}
+
+.social img {
+	width:100px;
+	margin-right: 30px;
+}
+
+
+
+
+}
+
+
+
+
+
+
+
